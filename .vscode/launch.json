@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:First.Swift}",
+            "name": "Debug LearnSwift",
+            "target": "LearnSwift",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug LearnSwift"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:First.Swift}",
+            "name": "Release LearnSwift",
+            "target": "LearnSwift",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release LearnSwift"
+        }
+    ]
+}
