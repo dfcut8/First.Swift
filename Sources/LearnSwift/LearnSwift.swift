@@ -49,8 +49,11 @@ struct LearnSwift {
         var optionalString: String? = "Hello"
         print(optionalString == nil)
         // Prints "false".
-
-        var optionalName: String? = "John Appleseed"
+        optionalString = nil
+        print("optional: \(optionalString ?? "bla")")
+        var newS = optionalString?.count
+        print(newS)
+        var optionalName: String? = nil
         var greeting = "Hello!"
         if let name = optionalName {
             greeting = "Hello, \(name)"
