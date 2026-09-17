@@ -60,8 +60,18 @@ struct LearnSwift {
         // }
         // print(greeting)
 
-        for (k, v) in occupations {
-            print("key: \(k), value: \(v)")
+        // for (k, v) in occupations {
+        //     print("key: \(k), value: \(v)")
+        // }
+
+        // for i in 0..<4 {
+        //     print(i)
+        // }
+
+        func greet(person: String, day: String) -> String {
+            return "Hello \(person), today is \(day)."
         }
+        let s = greet(person: "Bob", day: "Tuesday")
+        print(s)
     }
 }
