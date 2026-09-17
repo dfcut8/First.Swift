@@ -46,18 +46,22 @@ struct LearnSwift {
         //     print(f)
         // }
 
-        var optionalString: String? = "Hello"
-        print(optionalString == nil)
-        // Prints "false".
-        optionalString = nil
-        print("optional: \(optionalString ?? "bla")")
-        var newS = optionalString?.count
-        print(newS)
-        var optionalName: String? = nil
-        var greeting = "Hello!"
-        if let name = optionalName {
-            greeting = "Hello, \(name)"
+        // var optionalString: String? = "Hello"
+        // print(optionalString == nil)
+        // // Prints "false".
+        // optionalString = nil
+        // print("optional: \(optionalString ?? "bla")")
+        // var newS = optionalString?.count
+        // print(newS)
+        // var optionalName: String? = nil
+        // var greeting = "Hello!"
+        // if let name = optionalName {
+        //     greeting = "Hello, \(name)"
+        // }
+        // print(greeting)
+
+        for (k, v) in occupations {
+            print("key: \(k), value: \(v)")
         }
-        print(greeting)
     }
 }
