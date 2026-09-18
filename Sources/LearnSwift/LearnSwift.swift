@@ -74,5 +74,8 @@ struct LearnSwift {
         }
         let s = greet(person: "Bob", day: "Tuesday")
         print(s)
+
+        var example = ExampleStruct()
+        example.sayMyName()
     }
 }
