@@ -79,5 +79,7 @@ struct LearnSwift {
         example.sayMyName()
         example.name = "alex"
         example.sayMyName()
+        print(example.name)
+        print("bool: \(0 == 1)")
     }
 }
