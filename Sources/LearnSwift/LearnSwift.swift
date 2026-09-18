@@ -69,6 +69,7 @@ struct LearnSwift {
         // }
 
         func greet(person: String, day: String) -> String {
+            print(occupations.count)
             return "Hello \(person), today is \(day)."
         }
         let s = greet(person: "Bob", day: "Tuesday")
