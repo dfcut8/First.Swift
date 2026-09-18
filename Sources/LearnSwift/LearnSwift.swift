@@ -77,5 +77,7 @@ struct LearnSwift {
 
         var example = ExampleStruct()
         example.sayMyName()
+        example.name = "alex"
+        example.sayMyName()
     }
 }
