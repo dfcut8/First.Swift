@@ -100,10 +100,26 @@ struct LearnSwift {
         // let convertedNumber = Int(possibleNumber)
         // print(convertedNumber ?? 1)
 
-        let a = Int("1")
-        if let a {
-            print("a: \(a)")
+        // let a = Int("1")
+        // if let a {
+        //     print("a: \(a)")
+        // }
+        do {
+            try canThrow()
+        } catch {
+            print("catched")
         }
+        let age = 3
+        assert(age >= 0, "A person's age can't be less than zero.")
+        print("something after assertion")
+    }
+    enum MyError: Error {
+        case coolError(String)
+    }
+
+    static func canThrow() throws {
+        print("started")
+        throw MyError.coolError("test")
     }
 
 }
