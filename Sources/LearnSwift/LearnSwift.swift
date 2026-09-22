@@ -99,6 +99,11 @@ struct LearnSwift {
         // let possibleNumber = "123a"
         // let convertedNumber = Int(possibleNumber)
         // print(convertedNumber ?? 1)
+
+        let a = Int("1")
+        if let a {
+            print("a: \(a)")
+        }
     }
 
 }
