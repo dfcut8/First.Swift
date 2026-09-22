@@ -82,9 +82,23 @@ struct LearnSwift {
         print(example.name)
         print("bool: \(0 == 1)")
 
-        // let twoThousand: UInt16 = 2_000
+        // typealias FancyPrint = UInt16
+        // let twoThousand: FancyPrint = 2_000
+        // print(twoThousand)
+        // let http404Error = (404, "Not Found")
+        // print(http404Error)
+        // print(http404Error.0)
+        // print(http404Error.1)
+        // let http200Status = (statusCode: 200, description: "OK")
+        // print(http200Status.statusCode)
+        // twoThousand.fancyPrint()
         // let one: UInt8 = 1
         // let twoThousandAndOne = twoThousand + one
         // let twoThousandAndOne = twoThousand + UInt16(one)
+
+        // let possibleNumber = "123a"
+        // let convertedNumber = Int(possibleNumber)
+        // print(convertedNumber ?? 1)
     }
+
 }

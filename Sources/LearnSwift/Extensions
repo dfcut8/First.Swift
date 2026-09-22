@@ -1,0 +1,5 @@
+extension UInt16 {
+    func fancyPrint() {
+        print("I'm fancy")
+    }
+}
