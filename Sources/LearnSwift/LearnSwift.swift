@@ -1,6 +1,8 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
+import Foundation
+
 let name = "Alex"
 let int = 100
 let intAsString = "100"
@@ -68,19 +70,19 @@ struct LearnSwift {
         //     print(i)
         // }
 
-        func greet(person: String, day: String) -> String {
-            print(occupations.count)
-            return "Hello \(person), today is \(day)."
-        }
-        let s = greet(person: "Bob", day: "Tuesday")
-        print(s)
+        // func greet(person: String, day: String) -> String {
+        //     print(occupations.count)
+        //     return "Hello \(person), today is \(day)."
+        // }
+        // let s = greet(person: "Bob", day: "Tuesday")
+        // print(s)
 
-        var example = ExampleStruct()
-        example.sayMyName()
-        example.name = "alex"
-        example.sayMyName()
-        print(example.name)
-        print("bool: \(0 == 1)")
+        // var example = ExampleStruct()
+        // example.sayMyName()
+        // example.name = "alex"
+        // example.sayMyName()
+        // print(example.name)
+        // print("bool: \(0 == 1)")
 
         // typealias FancyPrint = UInt16
         // let twoThousand: FancyPrint = 2_000
@@ -104,30 +106,43 @@ struct LearnSwift {
         // if let a {
         //     print("a: \(a)")
         // }
-        do {
-            try canThrow()
-        } catch {
-            print("catched")
-        }
-        let age = 3
-        assert(age >= 0, "A person's age can't be less than zero.")
-        print("something after assertion")
+        // do {
+        //     try canThrow()
+        // } catch {
+        //     print("catched")
+        // }
+        // let age = 3
+        // assert(age >= 0, "A person's age can't be less than zero.")
+        // print("something after assertion")
 
-        let greeting = "Hello, world!"
-        let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
-        let beginning = greeting[..<index]
-        let ns = String(beginning)
+        // let greeting = "Hello, world!"
+        // let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+        // let beginning = greeting[..<index]
+        // let ns = String(beginning)
 
-        let s1 = "Hello"
-        let s2 = "Hello"
+        // let s1 = "Hello"
+        // let s2 = "Hello"
 
-        print(s1 == s2)
-        // beginning is "Hello"
+        // print(s1 == s2)
+        // // beginning is "Hello"
 
-        let s3 = "Very long text with long words"
-        let s4 = s3.replacing("long", with: "short")
-        print(s3)
-        print(s4)
+        // let s3 = "Very long text with long words"
+        // let s4 = s3.replacing("long", with: "short")
+        // print(s3)
+        // print(s4)
+
+        // let value = 1
+
+        // let result = value.formatted(
+        //     .number
+        //         .precision(.integerLength(5))
+        //         .grouping(.never)
+        // )
+
+        // print(result)
+
+        var c = CoolCollections()
+        c.run()
     }
     enum MyError: Error {
         case coolError(String)
