@@ -112,6 +112,22 @@ struct LearnSwift {
         let age = 3
         assert(age >= 0, "A person's age can't be less than zero.")
         print("something after assertion")
+
+        let greeting = "Hello, world!"
+        let index = greeting.firstIndex(of: ",") ?? greeting.endIndex
+        let beginning = greeting[..<index]
+        let ns = String(beginning)
+
+        let s1 = "Hello"
+        let s2 = "Hello"
+
+        print(s1 == s2)
+        // beginning is "Hello"
+
+        let s3 = "Very long text with long words"
+        let s4 = s3.replacing("long", with: "short")
+        print(s3)
+        print(s4)
     }
     enum MyError: Error {
         case coolError(String)
