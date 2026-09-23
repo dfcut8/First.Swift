@@ -146,19 +146,45 @@ struct LearnSwift {
         // var controlStatements = CoolControlStatements()
         // controlStatements.run()
 
-        var v = CoolFunctions()
-        print(v.displayName())
-        print(v)
-        v.doit()
-        v.printMathResult({ $0 * $1 }, 5, 2)
-        v.printMathResult({ $0 + $1 }, 5, 2)
-        v.printMathResult({ a, b in return a / b }, 5, 2)
-        v.printMathResult({ a, b in a * b }, 5, 2)
-        v.printMathResult(
-            { a, b in
-                let result = a * b
-                return result - 1
-            }, 5, 2)
+        // var v = CoolFunctions()
+        // print(v.displayName())
+        // print(v)
+        // v.doit()
+        // v.printMathResult({ $0 * $1 }, 5, 2)
+        // v.printMathResult({ $0 + $1 }, 5, 2)
+        // v.printMathResult({ a, b in return a / b }, 5, 2)
+        // v.printMathResult({ a, b in a * b }, 5, 2)
+        // v.printMathResult(
+        //     { a, b in
+        //         let result = a * b
+        //         return result - 1
+        //     }, 5, 2)
+
+        let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+        func backward(_ s1: String, _ s2: String) -> Bool {
+            return s1 > s2
+        }
+        let reversedNames = names.sorted(by: backward)
+        print(reversedNames)
+
+        let objects: [Int: [String: String]] = [
+            1: ["Name": "Chris"], 2: ["Name": "Alex"], 3: ["Name": "Bob"], 4: ["Name": "Crystal"],
+        ]
+        let reverseObjects = objects.sorted(by: { a, b in
+            return a.value["Name"] ?? "" < b.value["Name"] ?? ""
+        })
+        print(reverseObjects)
+
+        let reverseObjects2 = objects.sorted(by: { a, b in
+            return a.value["Name", default: ""] < b.value["Name", default: ""]
+        })
+        print(reverseObjects2)
+
+        let reverseObjects3 = objects.sorted {
+            $0.value["Name", default: ""] > $1.value["Name", default: ""]
+        }
+        print(reverseObjects3)
+
     }
     enum MyError: Error {
         case coolError(String)
