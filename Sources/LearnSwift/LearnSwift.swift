@@ -149,6 +149,16 @@ struct LearnSwift {
         var v = CoolFunctions()
         print(v.displayName())
         print(v)
+        v.doit()
+        v.printMathResult({ $0 * $1 }, 5, 2)
+        v.printMathResult({ $0 + $1 }, 5, 2)
+        v.printMathResult({ a, b in return a / b }, 5, 2)
+        v.printMathResult({ a, b in a * b }, 5, 2)
+        v.printMathResult(
+            { a, b in
+                let result = a * b
+                return result - 1
+            }, 5, 2)
     }
     enum MyError: Error {
         case coolError(String)
