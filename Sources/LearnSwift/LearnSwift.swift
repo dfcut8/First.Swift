@@ -143,8 +143,12 @@ struct LearnSwift {
 
         // var c = CoolCollections()
         // c.run()
-        var controlStatements = CoolControlStatements()
-        controlStatements.run()
+        // var controlStatements = CoolControlStatements()
+        // controlStatements.run()
+
+        var v = CoolFunctions()
+        print(v.displayName())
+        print(v)
     }
     enum MyError: Error {
         case coolError(String)
