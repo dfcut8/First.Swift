@@ -160,30 +160,43 @@ struct LearnSwift {
         //         return result - 1
         //     }, 5, 2)
 
-        let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
-        func backward(_ s1: String, _ s2: String) -> Bool {
-            return s1 > s2
-        }
-        let reversedNames = names.sorted(by: backward)
-        print(reversedNames)
+        // let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+        // func backward(_ s1: String, _ s2: String) -> Bool {
+        //     return s1 > s2
+        // }
+        // let reversedNames = names.sorted(by: backward)
+        // print(reversedNames)
 
-        let objects: [Int: [String: String]] = [
-            1: ["Name": "Chris"], 2: ["Name": "Alex"], 3: ["Name": "Bob"], 4: ["Name": "Crystal"],
-        ]
-        let reverseObjects = objects.sorted(by: { a, b in
-            return a.value["Name"] ?? "" < b.value["Name"] ?? ""
-        })
-        print(reverseObjects)
+        // let objects: [Int: [String: String]] = [
+        //     1: ["Name": "Chris"], 2: ["Name": "Alex"], 3: ["Name": "Bob"], 4: ["Name": "Crystal"],
+        // ]
+        // let reverseObjects = objects.sorted(by: { a, b in
+        //     return a.value["Name"] ?? "" < b.value["Name"] ?? ""
+        // })
+        // print(reverseObjects)
 
-        let reverseObjects2 = objects.sorted(by: { a, b in
-            return a.value["Name", default: ""] < b.value["Name", default: ""]
-        })
-        print(reverseObjects2)
+        // let reverseObjects2 = objects.sorted(by: { a, b in
+        //     return a.value["Name", default: ""] < b.value["Name", default: ""]
+        // })
+        // print(reverseObjects2)
 
-        let reverseObjects3 = objects.sorted {
-            $0.value["Name", default: ""] > $1.value["Name", default: ""]
-        }
-        print(reverseObjects3)
+        // let reverseObjects3 = objects.sorted {
+        //     $0.value["Name", default: ""] > $1.value["Name", default: ""]
+        // }
+        // print(reverseObjects3)
+
+        var videoM1 = VideoMode()
+        videoM1.resolution = Resolution(width: 240, height: 180)
+        videoM1.frameRate = 15.0
+
+        var videoM2 = VideoMode()
+        videoM2.resolution = Resolution(width: 640, height: 480)
+        videoM2.frameRate = 5.0
+
+        var videoM3 = videoM1
+        // print(videoM1 == videoM2)
+        print(videoM1 === videoM2)
+        print(videoM1 === videoM3)
 
     }
     enum MyError: Error {
