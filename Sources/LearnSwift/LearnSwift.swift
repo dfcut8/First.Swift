@@ -22,7 +22,7 @@ let emptyDictionary: [String: Float] = [:]
 
 @main
 struct LearnSwift {
-    static func main() {
+    static func main() async {
         var fruits = ["strawberries", "limes", "tangerines"]
 
         var occupations = [
@@ -185,18 +185,25 @@ struct LearnSwift {
         // }
         // print(reverseObjects3)
 
-        var videoM1 = VideoMode()
-        videoM1.resolution = Resolution(width: 240, height: 180)
-        videoM1.frameRate = 15.0
+        // var videoM1 = VideoMode()
+        // videoM1.resolution = Resolution(width: 240, height: 180)
+        // videoM1.frameRate = 15.0
 
-        var videoM2 = VideoMode()
-        videoM2.resolution = Resolution(width: 640, height: 480)
-        videoM2.frameRate = 5.0
+        // var videoM2 = VideoMode()
+        // videoM2.resolution = Resolution(width: 640, height: 480)
+        // videoM2.frameRate = 5.0
 
-        var videoM3 = videoM1
-        // print(videoM1 == videoM2)
-        print(videoM1 === videoM2)
-        print(videoM1 === videoM3)
+        // var videoM3 = videoM1
+        // // print(videoM1 == videoM2)
+        // print(videoM1 === videoM2)
+        // print(videoM1 === videoM3)
+
+        let orderProcessor = OrderProcessor()
+
+        let order = Order(position: "AAPL", amount: 100, executor: "ExecutorX")
+
+        let result = await orderProcessor.processOrder(order: order)
+        let logger: Logger.instance
 
     }
     enum MyError: Error {
