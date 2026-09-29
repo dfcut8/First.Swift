@@ -203,7 +203,8 @@ struct LearnSwift {
         let order = Order(position: "AAPL", amount: 100, executor: "ExecutorX")
 
         let result = await orderProcessor.processOrder(order: order)
-        let logger: Logger.instance
+        let logger = Logger.instance
+        logger.log("result: \(result)")
 
     }
     enum MyError: Error {

@@ -2,15 +2,12 @@ import Foundation
 
 final class Logger: Sendable {
     static let instance = Logger()
-    let date: Date
 
     private init() {
-
-        self.date = Date()
-        print("\(date): logging initialized")
+        print("\(Date()): logging initialized")
     }
 
-    func log(message: String) {
-        print("\(date): \(message)")
+    func log(_ message: String) {
+        print("\(Date()): \(message)")
     }
 }
