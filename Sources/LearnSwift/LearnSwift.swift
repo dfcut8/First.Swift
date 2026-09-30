@@ -198,13 +198,14 @@ struct LearnSwift {
         // print(videoM1 === videoM2)
         // print(videoM1 === videoM3)
 
-        let orderProcessor = OrderProcessor()
-
-        let order = Order(position: "AAPL", amount: 100, executor: "ExecutorX")
-
-        let result = await orderProcessor.processOrder(order: order)
         let logger = Logger.instance
-        logger.log("result: \(result)")
+        let orderProcessor = OrderProcessor()
+        for x in 1...10 {
+            let order = Order(position: "AAPL", amount: 100, executor: "Executor\(x)")
+            async let result = orderProcessor.processOrder(order: order)
+            // logger.log("executor: \(order.executor) completed it's work. result: \(result)")
+        }
+        let results = await
 
     }
     enum MyError: Error {

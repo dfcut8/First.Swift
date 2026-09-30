@@ -8,7 +8,7 @@ class OrderProcessor {
         logger.log("doing very long request somewhere")
         do {
 
-            try await Task.sleep(for: .seconds(3))
+            try await Task.sleep(for: .seconds(Int.random(in: 5...10)))
         } catch {
             logger.log("Error awaiting")
         }
